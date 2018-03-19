@@ -58,7 +58,10 @@ def countDirs(path1,path2):
 	return False
     return True
 	
-	
+def printErr:
+    print 'Useage: python2.6 /file/path/count_files.py path1 [path2]\n'
+    print 'Example: \n1)python2.6 count_files.py /tmp/\n2)python2.6 count_files.py /tmp/vmware-root/ /tmp/vmware-root-bak/\n'
+
 if __name__ == '__main__':
     try:
 	num_of_args = len(sys.argv)
@@ -69,10 +72,9 @@ if __name__ == '__main__':
         path_name1 = sys.argv[1]
             path_name2 = sys.argv[2]
             countDirs(path_name1,path_name2)
-	    else:
-            print 'Example: \n1)python2.6 count_files.py /tmp/\n2)python2.6 count_files.py /tmp/vmware-root/ /tmp/vmware-root-bak/'
+	else:
+            printErr()
             
     except IndexError, e:
         print e
-        print 'Useage: python2.6 /file/path/count_files.py path1 [path2]'
-        print 'Example: \n1)python2.6 count_files.py /tmp/\n2)python2.6 count_files.py /tmp/vmware-root/ /tmp/vmware-root-bak/'
+        printErr()
