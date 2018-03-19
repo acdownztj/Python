@@ -31,7 +31,7 @@ def countSingleDir(path):
 	print '**Total: ' + path_ret['total']
     else:
         print path + ' is not a direcotry!'
-	    return False
+	return False
     return True
 
 def countDirs(path1,path2):
@@ -40,11 +40,11 @@ def countDirs(path1,path2):
         path1_ret = countFiles(path1)
     else:
         print path1 + ' is not a direcotry! Please input a direcotry.'
-		return False
+	return False
 			
     if os.path.isdir(path2):
         path2_ret = countFiles(path2)
-	    print '**Path: ' + os.path.abspath(path_name1) + '\t|\t' + os.path.abspath(path_name2)
+	print '**Path: ' + os.path.abspath(path_name1) + '\t|\t' + os.path.abspath(path_name2)
         print '**Files: ' + path1_ret['files'] + '\t|\t' + path2_ret['files']
         print '**Dirs: ' + path1_ret['dirs'] + '\t|\t' + path2_ret['dirs']
         print '**Total: ' + path1_ret['total'] + '\t|\t' + path2_ret['total']
@@ -53,10 +53,9 @@ def countDirs(path1,path2):
             print '**  Same!'   # 如果文件和目录总数一致，返回 Same！
         else:
             print '**  Different!'   # 如果文件和目录总数不一致，返回 Different！
-
     else:
         print path2 + u' is not a direcotry! Please input a direcotry.'
-	    return False
+	return False
     return True
 	
 	
@@ -66,12 +65,12 @@ if __name__ == '__main__':
 	if num_of_args == 2:    # 接受一个路径参数
             path_name1 = sys.argv[1]
             countSingleDir(path_name1)
-    elif num_of_args == 3:  # 接受两个路径参数
+        elif num_of_args == 3:  # 接受两个路径参数
         path_name1 = sys.argv[1]
-        path_name2 = sys.argv[2]
-        countDirs(path_name1,path_name2)
-	else:
-        print 'Example: \n1)python2.6 count_files.py /tmp/\n2)python2.6 count_files.py /tmp/vmware-root/ /tmp/vmware-root-bak/'
+            path_name2 = sys.argv[2]
+            countDirs(path_name1,path_name2)
+	    else:
+            print 'Example: \n1)python2.6 count_files.py /tmp/\n2)python2.6 count_files.py /tmp/vmware-root/ /tmp/vmware-root-bak/'
             
     except IndexError, e:
         print e
