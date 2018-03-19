@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
-# Date: 2018-03-19
+# Author:tian-0715@163.com
 
 # 此文件用于显示目录下文件数和目录数，对比两目录下文件数和目录数 
 
