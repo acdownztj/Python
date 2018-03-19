@@ -58,9 +58,9 @@ def countDirs(path1,path2):
 	return False
     return True
 	
-def printErr:
-    print 'Useage: python2.6 /file/path/count_files.py path1 [path2]\n'
-    print 'Example: \n1)python2.6 count_files.py /tmp/\n2)python2.6 count_files.py /tmp/vmware-root/ /tmp/vmware-root-bak/\n'
+def printErr():
+    print '\nUseage: python2 /file/path/count_files.py path1 [path2]\n'
+    print 'Example: \n1)python2 count_files.py /tmp/\n2)python2 count_files.py /tmp/vmware-root/ /tmp/vmware-root-bak/\n'
 
 if __name__ == '__main__':
     try:
